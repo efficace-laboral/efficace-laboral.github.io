@@ -221,7 +221,7 @@ footer .footer__container {
   color: #000000;
 }
 
-.section__title-3rd--small, .podcasts__topic__container h3, .books__ranking__item h3 {
+.section__title-3rd--small, .trends__container h3, .podcasts__topic__container h3, .books__ranking__item h3 {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 32px;
   margin-bottom: 24px;
@@ -303,6 +303,7 @@ header .navbar__menu li .navbar__menu__item--first {
   justify-content: center;
 }
 .hero__img img {
+  object-fit: contain;
   height: 100%;
   width: 100%;
 }
@@ -355,6 +356,28 @@ header .navbar__menu li .navbar__menu__item--first {
 
 .team {
   margin: 0 50px;
+  /* Desactivado por cambio
+
+  blockquote p::before,
+  blockquote p::after {
+     content: "“";
+     font-family: $text-font;
+     font-size: 4rem;
+     margin: -1.5rem 0 0 -2.5rem;
+     position: absolute;
+     color: gray;
+  }
+
+  blockquote p::after {
+     content: "”";
+     margin: -1.6rem 0 0 -0.3rem;
+  }*/
+  /*  #blockquote_with_quotation {
+      display: flex;
+   }
+   #blockquote_without_quotation {
+      display: none;
+   } */
 }
 .team__text p {
   text-align: center;
@@ -402,23 +425,10 @@ header .navbar__menu li .navbar__menu__item--first {
   line-height: 1.5;
   text-align: center;
 }
-.team blockquote p::before,
-.team blockquote p::after {
-  content: "“";
-  font-family: "League Spartan", sans-serif;
-  font-size: 4rem;
-  margin: -1.5rem 0 0 -2.5rem;
-  position: absolute;
-  color: gray;
+.team #blockquote_desktop {
+  display: grid;
 }
-.team blockquote p::after {
-  content: "”";
-  margin: -1.6rem 0 0 -0.3rem;
-}
-.team #blockquote_with_quotation {
-  display: flex;
-}
-.team #blockquote_without_quotation {
+.team #blockquote_mobile {
   display: none;
 }
 .team .hero__button {
@@ -547,6 +557,9 @@ header .navbar__menu li .navbar__menu__item--first {
 .trends__container {
   margin-top: 40px;
   margin-bottom: 60px;
+}
+.trends__container h3 {
+  text-transform: uppercase;
 }
 
 .yt-video {
@@ -746,16 +759,17 @@ footer .footer__container i {
     border-radius: 2rem;
     padding: 6px 20px;
   }
-  blockquote p::before,
-  blockquote p::after {
-    visibility: hidden;
-  }
-  .team #blockquote_without_quotation {
-    display: flex;
-  }
-  .team #blockquote_with_quotation {
-    display: none;
-  }
+  /*     blockquote p::before,
+      blockquote p::after {
+          visibility: hidden;
+      }
+
+      .team #blockquote_without_quotation {
+              display: flex;
+          }
+      .team #blockquote_with_quotation {
+              display: none;
+          } */
   main .cv-templates__ranking .cv-templates__ranking__container {
     margin-left: auto;
     margin-right: auto;
@@ -938,6 +952,12 @@ footer .footer__container i {
     font-size: 22px;
     width: 230px;
     text-align: center;
+  }
+  main .team #blockquote_desktop {
+    display: none;
+  }
+  main .team #blockquote_mobile {
+    display: grid;
   }
   main .cv-templates__ranking .cv-templates__ranking__container {
     grid-template-columns: 1fr;

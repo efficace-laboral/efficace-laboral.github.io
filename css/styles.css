@@ -854,7 +854,7 @@ footer .footer__container i {
   header .navbar__menu li:last-child {
     border-radius: 2rem;
     align-items: center;
-    padding: 1px 20px;
+    padding: 0px 15px 10px 15px;
   }
   main .hero {
     grid-template-columns: minmax(200px, 600px);
